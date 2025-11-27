@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - live-docs
+      - add-mkdocs-github-action  # For testing this workflow
   pull_request:
     branches:
       - live-docs
