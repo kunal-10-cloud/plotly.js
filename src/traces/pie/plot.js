@@ -122,13 +122,13 @@ function plot(gd, cdModule) {
                         slicePath.attr(
                             'd',
                             'M' +
-                                (cx + hole * pt.px0[0]) +
-                                ',' +
-                                (cy + hole * pt.px0[1]) +
-                                arc(pt.px0, pt.pxmid, false, hole) +
-                                arc(pt.pxmid, pt.px0, false, hole) +
-                                'Z' +
-                                outerCircle
+                            (cx + hole * pt.px0[0]) +
+                            ',' +
+                            (cy + hole * pt.px0[1]) +
+                            arc(pt.px0, pt.pxmid, false, hole) +
+                            arc(pt.pxmid, pt.px0, false, hole) +
+                            'Z' +
+                            outerCircle
                         );
                     } else slicePath.attr('d', outerCircle);
                 } else {
@@ -139,16 +139,16 @@ function plot(gd, cdModule) {
                         slicePath.attr(
                             'd',
                             'M' +
-                                (cx + hole * pt.px1[0]) +
-                                ',' +
-                                (cy + hole * pt.px1[1]) +
-                                arc(pt.px1, pt.px0, false, hole) +
-                                'l' +
-                                rim * pt.px0[0] +
-                                ',' +
-                                rim * pt.px0[1] +
-                                outerArc +
-                                'Z'
+                            (cx + hole * pt.px1[0]) +
+                            ',' +
+                            (cy + hole * pt.px1[1]) +
+                            arc(pt.px1, pt.px0, false, hole) +
+                            'l' +
+                            rim * pt.px0[0] +
+                            ',' +
+                            rim * pt.px0[1] +
+                            outerArc +
+                            'Z'
                         );
                     } else {
                         slicePath.attr('d', 'M' + cx + ',' + cy + 'l' + pt.px0[0] + ',' + pt.px0[1] + outerArc + 'Z');
@@ -273,8 +273,8 @@ function plot(gd, cdModule) {
                 titleText.attr(
                     'transform',
                     strTranslate(transform.x, transform.y) +
-                        strScale(Math.min(1, transform.scale)) +
-                        strTranslate(transform.tx, transform.ty)
+                    strScale(Math.min(1, transform.scale)) +
+                    strTranslate(transform.tx, transform.ty)
                 );
             });
 
@@ -304,7 +304,7 @@ function plot(gd, cdModule) {
                     r: Math.max(traceBbox.right - (cd0.cx + cd0.r), 0),
                     b: Math.max(traceBbox.bottom - (cd0.cy + cd0.r), 0),
                     t: Math.max(cd0.cy - cd0.r - traceBbox.top, 0),
-                    pad: 5
+                    pad: 15
                 });
             }
         });
